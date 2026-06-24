@@ -1,0 +1,39 @@
+@model IEnumerable<DELAVEGA_MVC5.Models.Project>
+
+@{
+    ViewData["Title"] = "Project Manager";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+        <h1>Project Manager</h1>
+        <p class="text-muted">View, create, edit, and delete projects from this full-stack demo.</p>
+    </div>
+    <a class="btn btn-success" asp-action="Create">New Project</a>
+</div>
+
+<table class="table table-hover align-middle">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Role</th>
+            <th>Technologies</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var project in Model)
+        {
+            <tr>
+                <td>@project.Title</td>
+                <td>@project.Role</td>
+                <td>@project.Technologies</td>
+                <td class="text-end">
+                    <a class="btn btn-sm btn-outline-primary me-1" asp-action="Details" asp-route-id="@project.Id">Details</a>
+                    <a class="btn btn-sm btn-outline-secondary me-1" asp-action="Edit" asp-route-id="@project.Id">Edit</a>
+                    <a class="btn btn-sm btn-outline-danger" asp-action="Delete" asp-route-id="@project.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

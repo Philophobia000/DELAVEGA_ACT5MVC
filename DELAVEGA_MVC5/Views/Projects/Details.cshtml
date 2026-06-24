@@ -1,0 +1,27 @@
+@model DELAVEGA_MVC5.Models.Project
+
+@{
+    ViewData["Title"] = "Project Details";
+}
+
+<div class="project-detail p-4 rounded bg-light shadow-sm">
+    <h1>@Model.Title</h1>
+    <p class="lead">@Model.Summary</p>
+
+    <dl class="row">
+        <dt class="col-sm-3">Role</dt>
+        <dd class="col-sm-9">@Model.Role</dd>
+
+        <dt class="col-sm-3">Technologies</dt>
+        <dd class="col-sm-9">@Model.Technologies</dd>
+
+        <dt class="col-sm-3">Project Link</dt>
+        <dd class="col-sm-9">
+            <a href="@Model.Link" target="_blank" rel="noopener noreferrer">@Model.Link</a>
+        </dd>
+    </dl>
+
+    <a class="btn btn-secondary" asp-action="Index">Back to list</a>
+    <a class="btn btn-primary ms-2" asp-action="Edit" asp-route-id="@Model.Id">Edit</a>
+    <a class="btn btn-danger ms-2" asp-action="Delete" asp-route-id="@Model.Id">Delete</a>
+</div>

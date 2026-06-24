@@ -1,0 +1,20 @@
+@model DELAVEGA_MVC5.Models.Project
+
+@{
+    ViewData["Title"] = Model.Title;
+}
+
+<div class="project-detail p-4 rounded bg-light shadow-sm">
+    <h1>@Model.Title</h1>
+    <p class="lead">@Model.Summary</p>
+    <dl class="row">
+        <dt class="col-sm-3">Role</dt>
+        <dd class="col-sm-9">@Model.Role</dd>
+        <dt class="col-sm-3">Technologies</dt>
+        <dd class="col-sm-9">@Model.Technologies</dd>
+        <dt class="col-sm-3">Project link</dt>
+        <dd class="col-sm-9"><a href="@Model.Link" target="_blank" rel="noopener noreferrer">Visit project</a></dd>
+    </dl>
+
+    <a class="btn btn-secondary" asp-action="Index">Back to portfolio</a>
+</div>

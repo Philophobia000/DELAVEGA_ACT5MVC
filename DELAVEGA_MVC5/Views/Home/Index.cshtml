@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="hero-section p-5 rounded bg-light shadow-sm mb-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-7">
+                <h1 class="display-5">DELAVEGA CRUD Demo</h1>
+                <p class="lead">A simple ASP.NET Core MVC application demonstrating full-stack CRUD functionality with a project manager.</p>
+                <p>This app highlights models, controllers, Razor views, validation, and in-memory data storage for a complete C# MVC experience.</p>
+                <a class="btn btn-primary btn-lg me-2" asp-controller="Projects" asp-action="Index">Manage Projects</a>
+                <a class="btn btn-outline-secondary btn-lg" asp-controller="Home" asp-action="Contact">Contact</a>
+            </div>
+            <div class="col-lg-5 text-center mt-4 mt-lg-0">
+                <div class="hero-card p-4 rounded shadow-sm bg-white">
+                    <h2>Lesson 5 Focus</h2>
+                    <p>Unit testing, CRUD operations, and clean MVC app structure built for maintainability and clarity.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row g-4">
+    <div class="col-md-6">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">CRUD Operations</h5>
+                <p class="card-text">Create, read, update, and delete project records using a controller-backed in-memory service.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">Unit Testing</h5>
+                <p class="card-text">A separate NUnit test project validates business logic without relying on UI code.</p>
+            </div>
+        </div>
+    </div>
+</div>
